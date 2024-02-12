@@ -23,7 +23,9 @@ import {
   Header,
   LearnMoreLinks,
   ReloadInstructions,
+
 } from 'react-native/Libraries/NewAppScreen';
+import ScreenTest from './screen';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -33,6 +35,7 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
+      
       <Text
         style={[
           styles.sectionTitle,
@@ -78,16 +81,19 @@ function App(): React.JSX.Element {
           }}>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
+            screens and then come back to see your edits.
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
           </Section>
           <Section title="Debug">
             <DebugInstructions />
+          <ScreenTest />
           </Section>
+         
+     
           <Section title="Learn More">
-            Read the docs to discover what to do next:
+            im up here Read the docs to discover what to do next:
           </Section>
           <LearnMoreLinks />
         </View>
